@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ecole</title>
+
+	<link href="ecole.css" rel="stylesheet" type="text/css"/>
+
+	<!script src="s1.js" type="text/javascript" ><!/script>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+<h1>Ecole de Formation</h1>
+
+<div>
+<div class="slider">
+	<div class="slides">
+		 <img src="1.jpg" alt="" >
+		 <img src="2.jpg" alt="">
+		 <img src="3.jpg" alt="" >
+		<img src="10.jpg" alt="">
+	</div>
+</div>
+</div>
+<h2> Liste des formations</h2>
+
+<ul>
+
+	<li> <a href=""> Bureautique </a> </li>
+	<li> <a href=""> Infographique</a> </li>
+	<li> <a href="">Langues </a> </li>
+	<li> <a href="">Management </a> </li>
+	<li> <a href="">Comptabilité </a></li>
+</ul>
+
+
+ <div class="ajout">
+  <form>
+   nom de formation:<br>
+   <input id="txt" type="text" name="nom de formation">
+   </form>
+  <button class="bt"> Ajouter </button>
+</div>
+
+ <video width="320" height="240" controls> <source src="bullet journal.mp4" type="video/mp4"> </video>
+ </br>
+<!iframe width="700" height="394" src="https://www.youtube.com/embed/dYhEeVi2RAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><!/iframe>
+
+
+</br>
+</br>
+
+
+<table  style="width:100%" border="1" >
+
+	<tr class="firstl">
+		<td class="firstc">Formation</td>
+		<td>Volume horaire</td>
+		<td>Prix ht</td>
+		<td>Taxe</td>
+		<td class="TTC">Prix TTC</td>
+	</tr>
+
+	<tr>
+
+		<td class="firstc">Bureautique</td>
+		<td rowspan="2"> 2</td>
+		<td   id="pp"> 2000</td>
+		<td id="t" >10</td>
+		<td  class="res" id="r"></td>
+	</tr>
+	<tr>
+		<td class="firstc">Infographique</td>
+		<td id="p1">3000</td>
+		<td id="t1" >10</td>
+		<td class="res" id="r1"></td>
+		</tr>
+	<tr>
+		<td class="firstc"> Langues</td>
+		<td>3</td>
+		<td id="p2">2000</td>
+		<td  id="t2">0</td>
+		<td class="res" id="r2"></td>
+	</tr>
+	<tr>
+		<td class="firstc">Management</td>
+		<td rowspan="2"> 5</td>
+		<td id="p3">4000</td>
+		<td  id="t3">20</td>
+		<td class="res" id="r3" ></td></tr>
+	<tr>
+		<td class="firstc" >Comptabilité</td>
+		<td id="p4">5000</td>
+		<td id="t4">20</td>
+		<td  class="res" id="r4"></td>
+		</tr>
+</table>
+<script type="text/javascript">
+	function prixTtc(prix,tax) {
+    return parseInt(prix+(prix*tax/100));}
+
+    var prix = parseInt($("#p1").html());
+    var tax = parseInt($("#t1").html());
+   	$("td#r1").html(prixTtc(prix,tax));
+
+   	prix = parseInt($("#p2").html());
+    tax = parseInt($("#t2").html());
+   	$("td#r2").html(prixTtc(prix,tax));
+
+   	prix = parseInt($("#p3").html());
+    tax = parseInt($("#t3").html());
+   	$("td#r3").html(prixTtc(prix,tax));
+
+   	 prix = parseInt($("#p4").html());
+     tax = parseInt($("#t4").html());
+   	$("td#r4").html(prixTtc(prix,tax));
+
+   	 prix = parseInt($("#pp").html());
+     tax = parseInt($("#t").html());
+   	$("td#r").html(prixTtc(prix,tax));
+
+
+    $("button").click(function(){
+     var nm=$("#txt").val();
+     alert(nm);
+     var form = $("<a></a>").html(nm);
+     var f = $("<li></li>").html(form);
+     $("ul").append(f);
+      } );
+
+
+
+     $("table").append($("<tr></tr>").html("design"));
+
+</script>
+<br/>
+<br/>
+<br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<h4> Pour plus de contact <a href="https://mail.google.com/mail/u/0/#inbox"> clique ici </a> </h4>
+
+</video>
+</body>
+</html>
